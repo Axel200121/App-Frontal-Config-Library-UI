@@ -12,7 +12,13 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
         providePrimeNG({
             theme: {
-                preset: Aura
+                preset: Aura,
+                options: { // este es para agregar cosas más avanzadas
+                  cssLayer: {
+                      name: 'primeng',
+                      order: 'theme, base, primeng'
+                  }
+              }
             }
         })
   ]
